@@ -1,14 +1,30 @@
-const Componentmobile = (props)=>{
-    const{img,title,description,pire}=props
-    return <div style={{width:"100%"}} className="ha">
-       <div style={{background:"#ffff", padding:"60px 10px ", border:"1px solid rgb(228, 220, 224)"} }>
-        <img src={img} style={{width:400, height:400}}/>
-       </div>
-       <div style={ {border:"1px solid rgb(228, 220, 224)"}}>
-        <p style={{fontWeight:500}}>{title}</p>
-        <p>{description}</p>
-        <p style={{color:"red", fontWeight: "bold"}}>{pire}</p>
-       </div>
+const ProductItem = ({ title, img, description, price }) => {
+    console.log(title);
+    
+  return (
+    <div
+      style={{
+        width: "350px",
+        textAlign: "center",
+        border: "2px solid #e5e5e5",
+      }}
+    >
+      <div
+        style={{
+          padding: "5px",
+          background: "#fff",
+          borderBottom: "2px solid #e5e5e5",
+        }}
+      >
+        <img style={{ width: "100%" }} src={img} alt="san-pham" />
+      </div>
+      <div style={{ padding: "10px 5px" }}>
+        <h2>{title}</h2>
+        <p style={{ margin: "8px 0px " }}>{description} </p>
+        <h3>{price}</h3>
+      </div>
     </div>
-}
-export default Componentmobile;
+  );
+};
+
+export default ProductItem;
